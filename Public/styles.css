@@ -1,0 +1,385 @@
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* ::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0091EA;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track{
+    border: 2px solid #28B6F6;
+} */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00579C;
+    color: #FFF;
+    height: 65px;
+    width: 100vw;
+    position: fixed;
+}
+
+nav > ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+    margin-left: 100px;
+    padding: 0;
+}
+
+nav > ul > a{
+    text-decoration: none;
+    color: #FFF;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: 20px ;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+nav > ul > a::before{
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background-color: #28B6F6;
+    z-index: -1;
+    transition: all 150ms linear;
+}
+
+nav > ul > a:hover::before{
+    height: 220%;
+}
+
+nav > .logo{
+    margin-right: 100px;
+}
+
+nav > .menu-toggle{
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    display: none;
+}
+
+.active{
+    display: none;
+}
+
+
+#home{
+    width: 100vw;
+    height: 100vh;
+    min-height: fit-content;
+}
+
+#home > h1{
+    margin: 0;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: center;
+    color: #00579C;
+    padding-top: 120px;
+}
+
+.homediv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.mainTxt{
+    width: 300px;
+    margin-left: 200px;
+    /* margin-top: 80px; */
+    text-align: center;
+    font-size: 55px;
+    font-weight: 500;
+    text-align: left;
+    margin-right: 0;
+    /* display: inline-block; */
+}
+
+.registerBtn{
+    padding: 12px 60px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    margin-top: 75px;
+    background-color: #28B6F6;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    
+}
+
+.registerBtn:hover{
+    background-color: #0091EA;
+}
+
+#home > .homediv > .img > img{
+    height: 500px;
+    width: auto;
+    margin-right: 150px;
+}
+
+.flutter{
+    width: 100vw;
+    background-color: #28B6F6;
+    text-align: center;
+}
+
+.flutter > h1{
+    font-size: 35px;
+    font-weight: 500;
+    padding: 50px;
+    color: #FFF;
+}
+
+.flutter > p{
+    font-size: 24px;
+    color: #FFF;
+    font-weight: lighter;
+    padding: 0 100px;
+}
+
+.flutter > button{
+    margin: 50px;
+    background-color: #FEC107;
+    /* margin-bottom: 15px; */
+}
+
+.flutter > button:hover{
+    background-color: rgb(214, 163, 9);
+}
+
+#sessions{
+    width: 100vw;
+}
+
+#sessions > h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #00579C;
+    margin-top: 100px;
+}
+
+#sessions > .sessions-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sessions > .sessions-main > h2{
+    margin: 50px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #A1A4A7;
+    padding-bottom: 20px;
+    line-height: 40px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+}
+
+#sessions > .sessions-main > h2.on{
+    font-size: 40px;
+    color: #00579C;
+}
+
+#sessions > .sessions-main > h2.on::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    background-color: #FEC107;
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
+}
+
+#sessions > .sessions-main > h2:hover{
+    font-size: 40px;
+    color: #00579C;
+
+}
+
+#sessions > .sessions-main > h2:hover::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    background-color: #FEC107;
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
+}
+
+@media (max-width: 1150px)
+{
+    nav > ul > a{
+        font-size: 20px;
+    }
+
+    #home > h1{
+        font-size: 60px;
+    }
+
+    .mainTxt{
+        font-size: 40px;
+        margin-left: 100px;
+        margin-top: 75px;
+    }
+
+    #home > .homediv > .img > img{
+        height: 400px;
+        width: auto;
+        margin-top: 75px;
+    }
+}
+
+@media (max-width: 960px)
+{
+    .mainTxt{
+        margin-top: 100px;
+    }
+    
+    #home > .homediv > .img > img{
+        height: 300px;
+        width: auto;
+        margin-top: 100px;
+    }
+    .registerBtn{
+        width: 80%;
+    }
+    
+    .flutter > button{
+        margin: 50px;
+        background-color: #FEC107;
+        width: 300px;
+    }
+}
+
+@media (max-width: 850px){
+    .homediv{
+        flex-direction: column;
+    }
+
+    #home{
+        height: fit-content;
+    }
+
+    #home > .homediv > .img > img{
+        margin: 20px;
+        height: 450px;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px)
+{
+    nav > ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        display: block;
+        margin: 0;
+        height: fit-content;
+        text-align: center;
+        background-color: #00579C;
+        padding-top: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav > ul > a{
+        font-size: 20px;
+    }
+
+    nav > .menu-toggle{
+        display: block;
+    }
+
+    nav {
+        justify-content: center;
+    }
+    nav > .logo{
+        margin: 0;
+    }
+}
+
+@media (max-width: 550px)
+{
+    #home > .homediv > .img > img{
+        height: 350px;
+        width: auto;
+    }
+
+    #home > h1{
+        font-size: 50px;
+    }
+
+    .flutter > p{
+        font-size: 18px;
+        padding: 0 25px;
+        text-align: justify;
+    }
+
+    .flutter > h1{
+        padding: 20px;
+    }
+
+    #sessions > .sessions-main > h2, #sessions > .sessions-main > h2.on{
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px)
+{
+    #home > .homediv > .img > img{
+        height: 200px;
+        width: auto;
+        margin: 0;
+    }
+
+    .mainTxt{
+        margin-left: 50px;
+    }
+
+    .flutter > button{
+        margin: 0;
+        width: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+}
