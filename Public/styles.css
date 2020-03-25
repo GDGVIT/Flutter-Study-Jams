@@ -11,43 +11,26 @@ body{
     overflow-x: hidden;
 }
 
-/* ::-webkit-scrollbar{
-    width: 10px;
+.navbar{
+    background-color: #00579C !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: #0091EA;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-track{
-    border: 2px solid #28B6F6;
-} */
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #00579C;
+.navbar > button > span {
     color: #FFF;
-    height: 65px;
-    width: 100vw;
-    position: fixed;
+    outline: none;
+    border: none;
 }
 
-nav > ul{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 50%;
-    margin-left: 100px;
-    padding: 0;
-}
-
-nav > ul > a{
-    text-decoration: none;
+.navbar > a{
     color: #FFF;
-    list-style: none;
+    font-size: 24px;
+    margin-right: 100px;
+}
+
+.navbar > .collapse > .navbar-nav > a{
+    color: #FFF;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 2px;
@@ -57,7 +40,7 @@ nav > ul > a{
     position: relative;
 }
 
-nav > ul > a::before{
+.navbar > .collapse > .navbar-nav > a::before{
     content: '';
     position: absolute;
     top: -60%;
@@ -69,25 +52,13 @@ nav > ul > a::before{
     transition: all 150ms linear;
 }
 
-nav > ul > a:hover::before{
-    height: 220%;
+.navbar > .collapse > .navbar-nav > a:hover::before{
+    height: 175%;
 }
 
-nav > .logo{
-    margin-right: 100px;
+.navbar > .collapse{
+    margin-left: 100px;
 }
-
-nav > .menu-toggle{
-    position: absolute;
-    left: 20px;
-    font-size: 24px;
-    display: none;
-}
-
-.active{
-    display: none;
-}
-
 
 #home{
     width: 100vw;
@@ -135,7 +106,8 @@ nav > .menu-toggle{
     font-weight: 600;
     color: #FFF;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    
+    outline: none;
+    cursor: pointer;
 }
 
 .registerBtn:hover{
@@ -190,11 +162,11 @@ nav > .menu-toggle{
     margin-top: 100px;
 }
 
-#sessions > .sessions-main{
+/* #sessions > .sessions-main{
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
+} */
 
 #sessions > .sessions-main > h2{
     margin: 50px;
@@ -206,11 +178,19 @@ nav > .menu-toggle{
     width: 30%;
     text-align: center;
     position: relative;
+    display: inline-block;
 }
 
 #sessions > .sessions-main > h2.on{
     font-size: 40px;
     color: #00579C;
+    display: inline-block;
+    margin-left: 150px;
+}
+
+#sessions > .sessions-main > .classroom{
+    float: right;
+    margin-right: 200px;
 }
 
 #sessions > .sessions-main > h2.on::after{
@@ -227,7 +207,6 @@ nav > .menu-toggle{
 #sessions > .sessions-main > h2:hover{
     font-size: 40px;
     color: #00579C;
-
 }
 
 #sessions > .sessions-main > h2:hover::after{
@@ -239,6 +218,61 @@ nav > .menu-toggle{
     bottom: 0;
     transform: translateX(50%);
     right: 50%;
+}
+
+.card1{
+    width: 500px;
+    margin: auto auto;
+    background-color: #28B6F6;
+    border-radius: 8px;
+    color: #FFF;
+    margin-bottom: 75px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.card1 > h3{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-weight: 700;
+}
+
+.card1 > ol{
+    font-size: 20px;
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.sdc > .row > .col-lg-6 > .card1 > img, .sdc > .hidden > .row > .col-lg-6 > .card1 > img{
+    height: 300px;
+    width: 100%;
+}
+
+.sdc > .row > .col-lg-6{
+    padding: 0;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.sdc > .row {
+    padding: 0;
+    max-width: 100vw;
+}
+
+.see-more, .see-less{
+    text-align: center;
+    color: #00579C;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.see-more:hover, .see-less:hover{
+    color: #0091EA;
+}
+
+.hidden{
+    display: none;
 }
 
 @media (max-width: 1150px)
@@ -261,6 +295,20 @@ nav > .menu-toggle{
         height: 400px;
         width: auto;
         margin-top: 75px;
+    }
+
+    #sessions > .sessions-main > .classroom{
+        margin-right: 50px;
+    }
+
+    #sessions > .sessions-main > h2.on{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:1000px){
+    .navbar > .collapse > .navbar-nav > a:hover::before{
+        height: 0;
     }
 }
 
@@ -356,9 +404,41 @@ nav > .menu-toggle{
         padding: 20px;
     }
 
-    #sessions > .sessions-main > h2, #sessions > .sessions-main > h2.on{
+    #sessions > .sessions-main > h2
+    {
         font-size: 20px;
-        margin: 0;
+        /* margin: 0; */
+    }
+    #sessions > .sessions-main > h2.on{
+        font-size: 22px;
+        margin-right: 0;
+    }
+
+    #sessions > .sessions-main > .classroom{
+        margin-left: 0;
+    }
+
+    .card1{
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    #sessions > .sessions-main > h2:hover{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 450px){
+    .card1{
+        width: 350px;
+    }
+
+    .card1 > h3{
+        font-size: 24px;
+    }
+
+    .card1 > ol{
+        font-size: 18px;
     }
 }
 
@@ -381,5 +461,14 @@ nav > .menu-toggle{
         margin-top: 20px;
     }
 
+    .card1{
+        width: 300px;
+    }
+}
 
+@media (max-width: 350px)
+{
+    .card1{
+        margin-left: 30px;
+    }
 }

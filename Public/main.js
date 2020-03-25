@@ -1,8 +1,13 @@
-let bars = $('.menu-toggle');
-let icon = $('.fa-bars');
-let icon2 = $('.fa-times');
-let nav = $('.menu');
+let hiddenDiv = $('.hidden');
+let seeMore = $('.see-more');
+let seeLess = $('.see-less');
 
-bars.on('click', function(){
-    nav.slideToggle('active');
+seeMore.on('click', function(){
+    hiddenDiv.slideToggle('hidden');
+    $(this).hide();
 });
+
+seeLess.on('click', function(){
+    hiddenDiv.slideToggle('hidden');
+    seeMore.show();
+})
