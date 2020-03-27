@@ -1,0 +1,474 @@
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.navbar{
+    background-color: #00579C !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navbar > button > span {
+    color: #FFF;
+    outline: none;
+    border: none;
+}
+
+.navbar > a{
+    color: #FFF;
+    font-size: 24px;
+    margin-right: 100px;
+}
+
+.navbar > .collapse > .navbar-nav > a{
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: 20px ;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.navbar > .collapse > .navbar-nav > a::before{
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background-color: #28B6F6;
+    z-index: -1;
+    transition: all 150ms linear;
+}
+
+.navbar > .collapse > .navbar-nav > a:hover::before{
+    height: 175%;
+}
+
+.navbar > .collapse{
+    margin-left: 100px;
+}
+
+#home{
+    width: 100vw;
+    height: 100vh;
+    min-height: fit-content;
+}
+
+#home > h1{
+    margin: 0;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: center;
+    color: #00579C;
+    padding-top: 120px;
+}
+
+.homediv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.mainTxt{
+    width: 300px;
+    margin-left: 200px;
+    /* margin-top: 80px; */
+    text-align: center;
+    font-size: 55px;
+    font-weight: 500;
+    text-align: left;
+    margin-right: 0;
+    /* display: inline-block; */
+}
+
+.registerBtn{
+    padding: 12px 60px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    margin-top: 75px;
+    background-color: #28B6F6;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    outline: none;
+    cursor: pointer;
+}
+
+.registerBtn:hover{
+    background-color: #0091EA;
+}
+
+#home > .homediv > .img > img{
+    height: 500px;
+    width: auto;
+    margin-right: 150px;
+}
+
+.flutter{
+    width: 100vw;
+    background-color: #28B6F6;
+    text-align: center;
+}
+
+.flutter > h1{
+    font-size: 35px;
+    font-weight: 500;
+    padding: 50px;
+    color: #FFF;
+}
+
+.flutter > p{
+    font-size: 24px;
+    color: #FFF;
+    font-weight: lighter;
+    padding: 0 100px;
+}
+
+.flutter > button{
+    margin: 50px;
+    background-color: #FEC107;
+    /* margin-bottom: 15px; */
+}
+
+.flutter > button:hover{
+    background-color: rgb(214, 163, 9);
+}
+
+#sessions{
+    width: 100vw;
+}
+
+#sessions > h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #00579C;
+    margin-top: 100px;
+}
+
+/* #sessions > .sessions-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+#sessions > .sessions-main > h2{
+    margin: 50px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #A1A4A7;
+    padding-bottom: 20px;
+    line-height: 40px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+#sessions > .sessions-main > h2.on{
+    font-size: 40px;
+    color: #00579C;
+    display: inline-block;
+    margin-left: 150px;
+}
+
+#sessions > .sessions-main > .classroom{
+    float: right;
+    margin-right: 200px;
+}
+
+#sessions > .sessions-main > h2.on::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    background-color: #FEC107;
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
+}
+
+#sessions > .sessions-main > h2:hover{
+    font-size: 40px;
+    color: #00579C;
+}
+
+#sessions > .sessions-main > h2:hover::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10px;
+    background-color: #FEC107;
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
+}
+
+.card1{
+    width: 500px;
+    margin: auto auto;
+    background-color: #28B6F6;
+    border-radius: 8px;
+    color: #FFF;
+    margin-bottom: 75px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.card1 > h3{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-weight: 700;
+}
+
+.card1 > ol{
+    font-size: 20px;
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.sdc > .row > .col-lg-6 > .card1 > img, .sdc > .hidden > .row > .col-lg-6 > .card1 > img{
+    height: 300px;
+    width: 100%;
+}
+
+.sdc > .row > .col-lg-6{
+    padding: 0;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.sdc > .row {
+    padding: 0;
+    max-width: 100vw;
+}
+
+.see-more, .see-less{
+    text-align: center;
+    color: #00579C;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.see-more:hover, .see-less:hover{
+    color: #0091EA;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 1150px)
+{
+    nav > ul > a{
+        font-size: 20px;
+    }
+
+    #home > h1{
+        font-size: 60px;
+    }
+
+    .mainTxt{
+        font-size: 40px;
+        margin-left: 100px;
+        margin-top: 75px;
+    }
+
+    #home > .homediv > .img > img{
+        height: 400px;
+        width: auto;
+        margin-top: 75px;
+    }
+
+    #sessions > .sessions-main > .classroom{
+        margin-right: 50px;
+    }
+
+    #sessions > .sessions-main > h2.on{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:1000px){
+    .navbar > .collapse > .navbar-nav > a:hover::before{
+        height: 0;
+    }
+}
+
+@media (max-width: 960px)
+{
+    .mainTxt{
+        margin-top: 100px;
+    }
+    
+    #home > .homediv > .img > img{
+        height: 300px;
+        width: auto;
+        margin-top: 100px;
+    }
+    .registerBtn{
+        width: 80%;
+    }
+    
+    .flutter > button{
+        margin: 50px;
+        background-color: #FEC107;
+        width: 300px;
+    }
+}
+
+@media (max-width: 850px){
+    .homediv{
+        flex-direction: column;
+    }
+
+    #home{
+        height: fit-content;
+    }
+
+    #home > .homediv > .img > img{
+        margin: 20px;
+        height: 450px;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px)
+{
+    nav > ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        display: block;
+        margin: 0;
+        height: fit-content;
+        text-align: center;
+        background-color: #00579C;
+        padding-top: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav > ul > a{
+        font-size: 20px;
+    }
+
+    nav > .menu-toggle{
+        display: block;
+    }
+
+    nav {
+        justify-content: center;
+    }
+    nav > .logo{
+        margin: 0;
+    }
+}
+
+@media (max-width: 550px)
+{
+    #home > .homediv > .img > img{
+        height: 350px;
+        width: auto;
+    }
+
+    #home > h1{
+        font-size: 50px;
+    }
+
+    .flutter > p{
+        font-size: 18px;
+        padding: 0 25px;
+        text-align: justify;
+    }
+
+    .flutter > h1{
+        padding: 20px;
+    }
+
+    #sessions > .sessions-main > h2
+    {
+        font-size: 20px;
+        /* margin: 0; */
+    }
+    #sessions > .sessions-main > h2.on{
+        font-size: 22px;
+        margin-right: 0;
+    }
+
+    #sessions > .sessions-main > .classroom{
+        margin-left: 0;
+    }
+
+    .card1{
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    #sessions > .sessions-main > h2:hover{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 450px){
+    .card1{
+        width: 350px;
+    }
+
+    .card1 > h3{
+        font-size: 24px;
+    }
+
+    .card1 > ol{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px)
+{
+    #home > .homediv > .img > img{
+        height: 200px;
+        width: auto;
+        margin: 0;
+    }
+
+    .mainTxt{
+        margin-left: 50px;
+    }
+
+    .flutter > button{
+        margin: 0;
+        width: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .card1{
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px)
+{
+    .card1{
+        margin-left: 30px;
+    }
+}
