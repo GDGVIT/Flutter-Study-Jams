@@ -1,7 +1,7 @@
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/30529572/72455010-fb38d400-37e7-11ea-9c1e-8cdeb5f5906e.png" />
 	<h2 align="center"> Flutter Study Jams Portal </h2>
-	<h4 align="center"> This portal will showcase all the important details to the Flutter based workshop series being conducted as a part of 2CC session in VIT for the session 2020<h4>
+	<h4 align="center"> This portal will showcase all the important details related to the Flutter based workshop series being conducted as a part of 2CC session in VIT for the session 2020<h4>
 </p>
 
 ---
