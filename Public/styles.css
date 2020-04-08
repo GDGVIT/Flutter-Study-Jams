@@ -94,7 +94,7 @@ body{
     /* display: inline-block; */
 }
 
-.registerBtn{
+.registerBtn, .visit{
     padding: 12px 60px;
     text-align: center;
     border: none;
@@ -110,7 +110,7 @@ body{
     cursor: pointer;
 }
 
-.registerBtn:hover{
+.registerBtn:hover, .visit:hover{
     background-color: #0091EA;
 }
 
@@ -275,6 +275,145 @@ body{
     display: none;
 }
 
+#learn{
+    width: 100vw;
+    background-color: #28B6F6;
+    padding: 0 100px;
+    height: fit-content;
+}
+
+#learn > h1{
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* .row-1, .row-2{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+.img-round{
+    max-width: 170px;
+    height: 170px;
+    background-color: #FFF;
+    border-radius: 100%;
+    border: 2px solid #FFF;
+    transition: all 100ms linear;
+    box-sizing: border-box;
+    margin: auto
+}
+
+.img-round:hover{
+    padding: 10px;
+    background-color: red;
+}
+
+.row{
+    padding-bottom: 75px;
+    max-width: 100%;
+}
+
+#mentors{
+    background-color: #FEC107;
+    margin-top: 15px;
+    color: #FFF;
+}
+
+#mentors > h1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* 
+#mentors > .row > .col-md-4{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#mentors > .row > .col-md-8 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}  */
+
+#mentors h4{
+    font-size: 28px;
+    padding-right: 100px;
+    padding-left: 20px;
+    /* margin: auto; */
+}
+
+#mentors p{
+    /* padding-right: 200px; */
+    font-size: 22px;
+    width: 80%;
+    padding-left: 20px;
+    /* width: 100%; */
+    /* margin: auto auto; */
+}
+
+.main-img{
+    background-color: #FFF;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin: auto;
+    /* margin: auto; */
+}
+
+.img-bottom{
+    height: 150px;
+    width: 150px;
+    background-color: #FFF;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#mentors .row{
+    padding-bottom: 100px;
+}
+
+#mentors > .second-row{
+    margin-right: 110px;
+    margin-left: 110px;
+}
+
+#about{
+    background-color: #00579C;
+    color: #FFF;
+}
+
+#about > h1{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 75px;
+}
+
+#about > p{
+    font-size: 24px;
+    text-align: left;
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 75px;
+}
+
 @media (max-width: 1150px)
 {
     nav > ul > a{
@@ -304,11 +443,21 @@ body{
     #sessions > .sessions-main > h2.on{
         margin-left: 50px;
     }
+
+    #mentors  > .second-row{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width:1000px){
     .navbar > .collapse > .navbar-nav > a:hover::before{
         height: 0;
+    }
+
+    .img-bottom{
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -325,6 +474,10 @@ body{
     }
     .registerBtn{
         width: 80%;
+    }
+
+    #about .registerBtn{
+        width: 300px;
     }
     
     .flutter > button{
@@ -381,7 +534,29 @@ body{
     nav > .logo{
         margin: 0;
     }
+
+    .row{
+        padding-bottom: 0;
+    }
+    .img-round{
+        margin-bottom: 30px;
+    }
+
+    #about > .registerBtn,.visit{
+        width: 200px;
+    }
+
+    #about .visit{
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+
+    #about .registerBtn{
+        width: 200px;
+        padding: 12px 20px;
+    }
 }
+
 
 @media (max-width: 550px)
 {
@@ -426,6 +601,25 @@ body{
     #sessions > .sessions-main > h2:hover{
         font-size: 22px;
     }
+
+    #learn{
+        padding: 0 50px;
+    }
+
+    .main-img{
+        height: 200px;
+        width: 200px;
+    }
+
+    #mentors p{
+        width: 95%;
+        font-size: 20px;
+    }
+
+    #about p{
+        font-size: 18px;
+        width: 90%;
+    }
 }
 
 @media (max-width: 450px){
@@ -439,6 +633,20 @@ body{
 
     .card1 > ol{
         font-size: 18px;
+    }
+
+    #about .registerBtn, #about .visit{
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .img-round{
+        width: 130px;
+        height: 130px;
+    }
+
+    #learn > h1{
+        font-size: 35px;
     }
 }
 
@@ -469,6 +677,19 @@ body{
 @media (max-width: 350px)
 {
     .card1{
-        margin-left: 30px;
+        margin-left: 25px;
+    }
+
+    .mainTxt{
+        width: 250px;
+    }
+
+    #learn{
+        padding: 0 20px;
+    }
+
+    .img-bottom{
+        height: 80px;
+        width: 80px;
     }
 }
